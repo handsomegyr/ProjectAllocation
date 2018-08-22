@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98F2221F-EFDA-4AF3-B9A6-5533AF97DE71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectAllocationLayout</RootNamespace>
+    <AssemblyName>ProjectAllocationLayout</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EXE\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\EXE\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmBusinessBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBusinessBase.Designer.cs">
+      <DependentUpon>frmBusinessBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MasterDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form\MasterDataGridView.Designer.cs">
+      <DependentUpon>MasterDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMasterBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMasterBase.Designer.cs">
+      <DependentUpon>frmMasterBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statues\StatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Statues\StatusStrip.Designer.cs">
+      <DependentUpon>StatusStrip.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectAllocationBusiness\ProjectAllocationBusiness.csproj">
+      <Project>{FFF592B4-6FD7-4132-A691-23D65914AB6C}</Project>
+      <Name>ProjectAllocationBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectAllocationFramework\ProjectAllocationFramework.csproj">
+      <Project>{F344303D-2D0E-4DE6-B55E-12C8848BB4C9}</Project>
+      <Name>ProjectAllocationFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectAllocationResource\ProjectAllocationResource.csproj">
+      <Project>{5FF477A7-9A9A-4222-8A12-C8D42A6A4872}</Project>
+      <Name>ProjectAllocationResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectAllocationUtil\ProjectAllocationUtil.csproj">
+      <Project>{4779C360-9BEE-48CE-A8F4-E5E4A785CD4C}</Project>
+      <Name>ProjectAllocationUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{62067BFD-2939-4BD9-8306-ADA975D44A81}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmBusinessBase.resx">
+      <DependentUpon>frmBusinessBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMasterBase.resx">
+      <DependentUpon>frmMasterBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MasterDataGridView.resx">
+      <DependentUpon>MasterDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statues\StatusStrip.resx">
+      <DependentUpon>StatusStrip.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

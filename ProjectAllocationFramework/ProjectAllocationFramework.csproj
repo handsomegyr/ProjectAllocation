@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F344303D-2D0E-4DE6-B55E-12C8848BB4C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectAllocationFramework</RootNamespace>
+    <AssemblyName>ProjectAllocationFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EXE\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\EXE\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDispatcher.cs" />
+    <Compile Include="Attribute\EntryNameAttribute.cs" />
+    <Compile Include="Attribute\EntryDescriptionAttribute.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="DockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockContent.Designer.cs">
+      <DependentUpon>DockContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entry.cs" />
+    <Compile Include="Form\frmExceptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmExceptionBox.Designer.cs">
+      <DependentUpon>frmExceptionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RuntimeException.cs" />
+    <Compile Include="DataGridViewCellStyle.cs" />
+    <Compile Include="Command\CommandBase.cs" />
+    <Compile Include="Command\CommandManager.cs" />
+    <Compile Include="Command\ShutDownCommand.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="CoreDataType.cs" />
+    <Compile Include="Form\frmBigBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBigBase.Designer.cs">
+      <DependentUpon>frmBigBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSmallBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmSmallBase.Designer.cs">
+      <DependentUpon>frmSmallBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEntry.cs" />
+    <Compile Include="NotifiedDictionary.cs" />
+    <Compile Include="Notify\NotifyManager.cs" />
+    <Compile Include="Notify\NotifyIconContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Notify\NotifyIconContextMenu.Designer.cs">
+      <DependentUpon>NotifyIconContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Statues\ProgressChangedEventHandler.cs" />
+    <Compile Include="Statues\EmptyStatusStrip.cs" />
+    <Compile Include="Statues\IStatusStrip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectAllocationResource\ProjectAllocationResource.csproj">
+      <Project>{5FF477A7-9A9A-4222-8A12-C8D42A6A4872}</Project>
+      <Name>ProjectAllocationResource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{62067BFD-2939-4BD9-8306-ADA975D44A81}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DockContent.resx">
+      <DependentUpon>DockContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmBigBase.resx">
+      <DependentUpon>frmBigBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmExceptionBox.resx">
+      <DependentUpon>frmExceptionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSmallBase.resx">
+      <DependentUpon>frmSmallBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notify\NotifyIconContextMenu.resx">
+      <DependentUpon>NotifyIconContextMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Form\dataGridView.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

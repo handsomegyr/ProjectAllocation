@@ -1,0 +1,9 @@
+C:\project\CSharp\ProjectAllocation\EXE\Debug\ProjectAllocation.Controls.dll
+C:\project\CSharp\ProjectAllocation\EXE\Debug\ProjectAllocation.Controls.pdb
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.BorderDataGridView.resources
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.Properties.Resources.resources
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.XPLabel.resources
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.XPInputTextBox.resources
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\Controls.csproj.GenerateResource.Cache
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.dll
+C:\project\CSharp\ProjectAllocation\Controls\obj\Debug\ProjectAllocation.Controls.pdb

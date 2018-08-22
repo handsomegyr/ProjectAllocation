@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_Field_Error" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Common_Master_Import_Info" xml:space="preserve">
+    <value>The No. {0} data are being imported.</value>
+  </data>
+  <data name="Common_Master_ReadFromExcel_Info" xml:space="preserve">
+    <value>The No. {0} data are being read.</value>
+  </data>
+  <data name="Common_Master_Save_Info" xml:space="preserve">
+    <value>The No. {0} data are being saved.</value>
+  </data>
+  <data name="Common_Master_Validate_Info" xml:space="preserve">
+    <value>The No. {0} data are being validated.</value>
+  </data>
+  <data name="Common_Row_Error" xml:space="preserve">
+    <value>The No. {0} Row has the following error!</value>
+  </data>
+  <data name="Login_UserPwd_Error" xml:space="preserve">
+    <value>用户ID或密码不正确！请重试！</value>
+  </data>
+  <data name="User_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="User_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载用户数据！</value>
+  </data>
+  <data name="User_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存用户数据！</value>
+  </data>
+  <data name="User_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证用户数据！</value>
+  </data>
+  <data name="User_UserCode_Exists" xml:space="preserve">
+    <value>用户码 "{3}" 已经存在！</value>
+  </data>
+  <data name="User_UserCode_NotNull" xml:space="preserve">
+    <value>用户码不可以为空！</value>
+  </data>
+  <data name="User_UserCode_Unique" xml:space="preserve">
+    <value>用户码 "{3}" 已重复！</value>
+  </data>
+  <data name="Procedure_ProcedureCode_Exists" xml:space="preserve">
+    <value>专业码 "{3}" 已经存在！</value>
+  </data>
+  <data name="Procedure_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="Procedure_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载专业数据！</value>
+  </data>
+  <data name="Procedure_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存专业数据！</value>
+  </data>
+  <data name="Procedure_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证专业数据！</value>
+  </data>
+  <data name="Procedure_ProcedureCode_NotNull" xml:space="preserve">
+    <value>专业码不可以为空！</value>
+  </data>
+  <data name="Procedure_ProcedureCode_Unique" xml:space="preserve">
+    <value>专业码 "{3}" 已重复！</value>
+  </data>
+  <data name="Common_Master_ExportToExcel_Info" xml:space="preserve">
+    <value>The No. {0} data are being exported to the excel file..</value>
+  </data>
+  <data name="Common_Master_Export_Info" xml:space="preserve">
+    <value>Total {0}% data have been processed.</value>
+  </data>
+  <data name="Login_UserID_NoInput_Info" xml:space="preserve">
+    <value>请输入用户ID！</value>
+  </data>
+  <data name="Login_UserPwd_NoInput_Info" xml:space="preserve">
+    <value>请输入用户密码</value>
+  </data>
+  <data name="Common_DataGridView_IsDirty" xml:space="preserve">
+    <value>Operation did not succeed because the program cannot commit or quit a cell value change.</value>
+  </data>
+  <data name="Exit_Info" xml:space="preserve">
+    <value>你确定要退出系统吗？</value>
+  </data>
+  <data name="Project_ProjectCode_Exists" xml:space="preserve">
+    <value>项目码 "{3}" 已经存在！</value>
+  </data>
+  <data name="Project_ProjectCode_Length" xml:space="preserve">
+    <value>项目名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Project_ProjectCode_NotNull" xml:space="preserve">
+    <value>项目码不可以为空！</value>
+  </data>
+  <data name="Project_ProjectCode_Unique" xml:space="preserve">
+    <value>项目码 "{3}" 已重复！</value>
+  </data>
+  <data name="Project_ProjectName_Length" xml:space="preserve">
+    <value>项目名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Project_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="Project_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载项目数据！</value>
+  </data>
+  <data name="Project_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存项目数据！</value>
+  </data>
+  <data name="Project_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证项目数据！</value>
+  </data>
+  <data name="Job_JobCode_Exists" xml:space="preserve">
+    <value>工序码 "{3}" 已经存在！</value>
+  </data>
+  <data name="Job_JobCode_NotNull" xml:space="preserve">
+    <value>工序码不可以为空！</value>
+  </data>
+  <data name="Job_JobCode_Unique" xml:space="preserve">
+    <value>工序码 "{3}" 已重复！</value>
+  </data>
+  <data name="Job_JobName_Length" xml:space="preserve">
+    <value>工序名的长度必须在 {3} 和 {5}  字符之间！</value>
+  </data>
+  <data name="Job_Percent_Format" xml:space="preserve">
+    <value>分配比例应该输入数字！</value>
+  </data>
+  <data name="Job_Percent_Length" xml:space="preserve">
+    <value>分配比例的长度必须在 {3} 和 {5}  字符之间！</value>
+  </data>
+  <data name="Job_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="Job_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载工序数据！</value>
+  </data>
+  <data name="Job_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存工序数据！</value>
+  </data>
+  <data name="Job_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证工序数据！</value>
+  </data>
+  <data name="Procedure_Percent_Format" xml:space="preserve">
+    <value>分配比例应该输入数字！</value>
+  </data>
+  <data name="Procedure_Percent_Length" xml:space="preserve">
+    <value>分配比例的长度必须在 {3} 和 {5}  字符之间！</value>
+  </data>
+  <data name="Procedure_ProcedureName_Length" xml:space="preserve">
+    <value>专业名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Worker_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="Worker_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载员工数据！</value>
+  </data>
+  <data name="Worker_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存员工数据！</value>
+  </data>
+  <data name="Worker_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证员工数据！</value>
+  </data>
+  <data name="Worker_WorkerCode_Exists" xml:space="preserve">
+    <value>员工码 "{3}" 已经存在！</value>
+  </data>
+  <data name="Worker_WorkerCode_Length" xml:space="preserve">
+    <value>员工名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Worker_WorkerCode_NotNull" xml:space="preserve">
+    <value>员工码不可以为空！</value>
+  </data>
+  <data name="Worker_WorkerCode_Unique" xml:space="preserve">
+    <value>员工码 "{3}" 已重复！</value>
+  </data>
+  <data name="Worker_WorkerName_Length" xml:space="preserve">
+    <value>员工名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Stage_Percent_Format" xml:space="preserve">
+    <value>分配比例应该输入数字！</value>
+  </data>
+  <data name="Stage_Percent_Length" xml:space="preserve">
+    <value>分配比例的长度必须在 {3} 和 {5}  字符之间！</value>
+  </data>
+  <data name="Stage_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+  <data name="Stage_StageCode_Exists" xml:space="preserve">
+    <value>阶段码 "{3}" 已经存在！</value>
+  </data>
+  <data name="Stage_StageCode_NotNull" xml:space="preserve">
+    <value>阶段码不可以为空！</value>
+  </data>
+  <data name="Stage_StageCode_Unique" xml:space="preserve">
+    <value>阶段码 "{3}" 已重复！</value>
+  </data>
+  <data name="Stage_StageName_Length" xml:space="preserve">
+    <value>阶段名的长度必须在 {3} 和 {5} 字符之间！</value>
+  </data>
+  <data name="Stage_TaskMessage_Load" xml:space="preserve">
+    <value>正在加载阶段数据！</value>
+  </data>
+  <data name="Stage_TaskMessage_Save" xml:space="preserve">
+    <value>正在保存阶段数据！</value>
+  </data>
+  <data name="Stage_TaskMessage_Validate" xml:space="preserve">
+    <value>正在验证阶段数据！</value>
+  </data>
+  <data name="Common_Process_Failure" xml:space="preserve">
+    <value>执行失败</value>
+  </data>
+  <data name="Common_Process_Success" xml:space="preserve">
+    <value>执行成功</value>
+  </data>
+  <data name="ProjectAllocationCalc_SaveMessage" xml:space="preserve">
+    <value>你确定要将选中的记录保存吗？</value>
+  </data>
+</root>

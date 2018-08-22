@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mains>
+
+	<Item>
+		
+		<Name shell="">产值计算 </Name>
+		<SubItems>
+			<Item>
+				<Name MenuKey ="101" shell="Project.dll">项目 </Name>
+				<SubItems>
+				</SubItems>
+			</Item>
+			<Item>
+				<Name MenuKey ="102" shell="ProjectAllocationCalc.dll">项目产值计算 </Name>
+				<SubItems>
+				</SubItems>
+			</Item>
+
+			<Item>
+				<Name MenuKey ="103" shell="WorkerAllocationStatistics.dll">员工项目产值统计 </Name>
+				<SubItems>
+				</SubItems>
+			</Item>
+		</SubItems>
+
+	</Item>
+  <Item>
+		<Name shell="">基础数据 </Name>
+		<SubItems>
+			
+			<Item>
+				<Name MenuKey ="201" shell="Stage.dll">阶段 </Name>
+				<SubItems>
+					
+				</SubItems>
+			</Item>
+			<Item>
+				<Name MenuKey ="202" shell="Procedure.dll">专业 </Name>
+				<SubItems>
+
+				</SubItems>
+			</Item>
+			<Item>
+				<Name MenuKey ="203" shell="Job.dll">工序 </Name>
+				<SubItems>
+					
+				</SubItems>
+			</Item>
+			<Item>
+				<Name MenuKey ="204" shell="Worker.dll">员工 </Name>
+				<SubItems>
+					
+				</SubItems>
+			</Item>			
+		    
+		</SubItems>
+	</Item>
+
+  
+
+  <Item>
+    <Name shell="">系统设置 </Name>
+    <SubItems>
+		<Item>
+			<Name MenuKey ="301" shell="User.dll">后台用户 </Name>
+			<SubItems>
+			</SubItems>
+		</Item>      
+    </SubItems>
+  </Item>
+  
+</Mains>
+
+
+
+
