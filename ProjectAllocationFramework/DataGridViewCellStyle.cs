@@ -12,7 +12,7 @@ namespace ProjectAllocationFramework
         private static System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4Double = new System.Windows.Forms.DataGridViewCellStyle();
         private static System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4Int = new System.Windows.Forms.DataGridViewCellStyle();
         private static System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4IntWithoutComma = new System.Windows.Forms.DataGridViewCellStyle();
-
+                
         public static System.Windows.Forms.DataGridViewCellStyle DataGridViewCellStyle4String
         {
             get { return dataGridViewCellStyle4String; }

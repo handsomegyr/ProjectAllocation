@@ -56,6 +56,8 @@ namespace Project
             this.projectCodeColumn.MaxInputLength = 30;
             this.projectCodeColumn.Name = "projectCodeColumn";
             this.projectCodeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.projectCodeColumn.ValueType = typeof(string);
+            
             // 
             // projectNameColumn
             // 
@@ -65,10 +67,12 @@ namespace Project
             this.projectNameColumn.MaxInputLength = 100;
             this.projectNameColumn.Name = "projectNameColumn";
             this.projectNameColumn.Width = 450;
+            this.projectNameColumn.ValueType = typeof(string);
             //200
 
             this.RowTemplate.Height = 27;
 
+            
             initializeColumn();
 
         }
@@ -83,6 +87,9 @@ namespace Project
             this.delColumn,
             this.projectCodeColumn,
             this.projectNameColumn});
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Columns[this.projectCodeColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9_With_Specail_Chars;
+            this.Columns[this.projectNameColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_All;
             if (this.Tag !=null && this.FindForm() != null && this.FindForm().Name == this.Tag.ToString())
             {
                 this.delColumn.Visible = false;

@@ -94,6 +94,11 @@ namespace User
             this.userCodeColumn,
             this.userNameColumn,
             this.passwordColumn});
+
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Columns[this.userCodeColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9;
+            this.Columns[this.passwordColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9Chinese;
+
         }
 
         private delegate void TaskEventHandler<T>(List<T> dataSource);

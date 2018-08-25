@@ -96,6 +96,12 @@ namespace Procedure
             this.procedureNameColumn,
             this.percentColumn});
 
+
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Columns[this.procedureCodeColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9;
+            this.Columns[this.procedureNameColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9Chinese;
+            this.Columns[this.percentColumn.Name].DefaultCellStyle.Tag = "0|100";
+
             if (this.Tag != null && this.FindForm() != null && this.FindForm().Name == this.Tag.ToString())
             {
                 this.delColumn.Visible = false;

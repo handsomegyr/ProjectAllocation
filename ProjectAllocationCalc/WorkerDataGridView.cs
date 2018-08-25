@@ -137,6 +137,9 @@ namespace ProjectAllocationCalc
             this.workerNameColumn,
             this.percentColumn,
             this.workerWorthColumn});
+
+            this.Columns[this.percentColumn.Name].DefaultCellStyle.Tag = "0|100";
+
             this.Clear();
             this.workerAllocationCalcEntityList.Clear();
             this.myDictionary.Clear();
@@ -232,14 +235,14 @@ namespace ProjectAllocationCalc
             {
                 return;
             }
-            if (this.Columns[e.ColumnIndex].Name == this.percentColumn.Name)
-            {
-                var dblValue = ConvertUtil.ToDouble(this.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                if (dblValue < 0 || dblValue > 100)
-                {
-                    return;
-                }
-            }
+            //if (this.Columns[e.ColumnIndex].Name == this.percentColumn.Name)
+            //{
+            //    var dblValue = ConvertUtil.ToDouble(this.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+            //    if (dblValue < 0 || dblValue > 100)
+            //    {
+            //        return;
+            //    }
+            //}
             // 重新计算
             reCalcWorth();            
             
@@ -254,58 +257,30 @@ namespace ProjectAllocationCalc
                 return;
             }
 
-            if (this.Columns[e.ColumnIndex].Name == this.percentColumn.Name)
-            {
-                double dblRet = 0.0;
-                if (!string.IsNullOrEmpty(e.FormattedValue.ToString()))
-                {
-                    if (!double.TryParse(e.FormattedValue.ToString(), out dblRet))
-                    {
-                        e.Cancel = true;
+            //if (this.Columns[e.ColumnIndex].Name == this.percentColumn.Name)
+            //{
+            //    double dblRet = 0.0;
+            //    if (!string.IsNullOrEmpty(e.FormattedValue.ToString()))
+            //    {
+            //        if (!double.TryParse(e.FormattedValue.ToString(), out dblRet))
+            //        {
+            //            e.Cancel = true;
 
-                        this.CancelEdit();
-                        //MessageBox.Show("请输入数字或小数", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-                    if (dblRet < 0 || dblRet > 100)
-                    {
-                        e.Cancel = true;
-                        this.CancelEdit();
-                        //MessageBox.Show("请输入数字或小数", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                        //e.FormattedValue = this.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                    }
-                }
-            }
+            //            this.CancelEdit();
+            //            //MessageBox.Show("请输入数字或小数", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            return;
+            //        }
+            //        if (dblRet < 0 || dblRet > 100)
+            //        {
+            //            e.Cancel = true;
+            //            this.CancelEdit();
+            //            //MessageBox.Show("请输入数字或小数", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            return;
+            //            //e.FormattedValue = this.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            //        }
+            //    }
+            //}
 
-            
-
-            //If CType(sender, DataGridView).Columns(e.ColumnIndex).ValueType Is GetType(System.String) Then
-
-            //        If Not String.IsNullOrEmpty(e.FormattedValue.ToString) Then
-            //            If Not isValid(e.FormattedValue.ToString) Then
-            //                e.Cancel = True
-            //            End If
-            //        End If
-
-            //    Else
-
-            //        Dim dblRet As Double = 0.0
-            //        If Not String.IsNullOrEmpty(e.FormattedValue.ToString) Then
-            //            'If (Not Double.TryParse(e.FormattedValue.ToString, dblRet)) Or dblRet < 0.0 Then
-            //            If CType(sender, DataGridView).Name = dgvKanri.Name And _
-            //                CType(sender, DataGridView).Columns(e.ColumnIndex).Name = dgvKanri.Columns("colMtRiekiRitu").Name Then
-            //                If (Not Double.TryParse(e.FormattedValue.ToString, dblRet)) Then
-            //                    e.Cancel = True
-            //                End If
-            //            Else
-
-            //                If (Not Double.TryParse(e.FormattedValue.ToString, dblRet)) Or dblRet < 0.0 Then
-            //                    e.Cancel = True
-            //                End If
-            //            End If
-            //        End If
-            //    End If
         }
 
         private double worth = 0.0;

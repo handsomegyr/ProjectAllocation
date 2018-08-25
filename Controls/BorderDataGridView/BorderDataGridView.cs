@@ -5,12 +5,20 @@ using System.Text;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace ProjectAllocation.Controls
 {
     [ToolboxBitmap(typeof(System.Windows.Forms.DataGridView))]
     public class BorderDataGridView : System.Windows.Forms.DataGridView
     {
+        public const string C_RegularExpressions_A_Za_z = @"^[A-Za-z \-]+$";
+        public const string C_RegularExpressions_A_Za_z0_9 = @"^[A-Za-z0-9]+$";
+        public const string C_RegularExpressions_A_Za_z0_9_With_Specail_Chars = @"^[A-Za-z0-9 \-()]+$";
+        public const string C_RegularExpressions_A_Za_z0_9Chinese = @"^[A-Za-z0-9 \-()\u4e00-\u9fa5]+$";
+        public const string C_RegularExpressions_All = @"^[A-Za-z0-9 \-\u2e80-\u9fff\uFF00-\uFFFF\u0000-\u00FF]+$";
+        public const string C_RegularExpressions_Word = @"^\w+$";
+
         public const int WM_ERASEBKGND = 0x14;
         public const int WM_PAINT = 0xF;
         public const int WM_NC_PAINT = 0x85;
@@ -120,8 +128,8 @@ namespace ProjectAllocation.Controls
         {
             e.Control.KeyPress -= new System.Windows.Forms.KeyPressEventHandler(TextBoxKeyPress);
             e.Control.KeyPress += new System.Windows.Forms.KeyPressEventHandler(TextBoxKeyPress);
-            //e.Control.Validating -= new System.ComponentModel.CancelEventHandler(TextBoxValidating);
-            //e.Control.Validating += new System.ComponentModel.CancelEventHandler(TextBoxValidating);
+            e.Control.Validating -= new System.ComponentModel.CancelEventHandler(TextBoxValidating);
+            e.Control.Validating += new System.ComponentModel.CancelEventHandler(TextBoxValidating);
         }
 
         private void TextBoxValidating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -131,9 +139,38 @@ namespace ProjectAllocation.Controls
                 System.Windows.Forms.Control control = sender as System.Windows.Forms.Control;
                 if (control != null)
                 {
-                    Type t = this.Columns[this.CurrentCell.ColumnIndex].ValueType;
+                    Type t = this.Columns[this.CurrentCell.ColumnIndex].ValueType;                   
 
-                    e.Cancel = false;
+                    var isCancel = false;
+
+                    if (!isCancel && this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle != null && this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle.Tag != null)
+                    {
+                        if (t == typeof(decimal) || t == typeof(Single) || t == typeof(Double) || t == typeof(Int16) || t == typeof(Int32) || t == typeof(Int64) || t == typeof(UInt16) || t == typeof(UInt32) || t == typeof(UInt64) || t == typeof(Byte) || t == typeof(SByte))
+                        {
+                            double dblRet = 0;
+                            if (!double.TryParse(control.Text, out dblRet))
+                            {
+                                isCancel = true;
+                            }
+                            string[] sArray = this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle.Tag.ToString().Split('|');
+
+                            if (dblRet <double.Parse(sArray[0])  || dblRet > double.Parse(sArray[1]))
+                            {
+                                isCancel = true;
+                            }
+                        }
+                        else
+                        {
+                            //isCancel = !Regex.IsMatch(control.Text, this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle.Tag.ToString(), RegexOptions.ECMAScript);
+                        }
+                    }
+
+                    e.Cancel = isCancel;
+                    if (isCancel)
+                    {
+
+                        this.CancelEdit();
+                    }
                 }
             }
             catch { }
@@ -146,12 +183,33 @@ namespace ProjectAllocation.Controls
 
             try
             {
-                System.Windows.Forms.Control control = sender as System.Windows.Forms.Control;
+                System.Windows.Forms.Control control = sender as System.Windows.Forms.Control;                
                 if (control != null)
-                {
+                {                    
                     Type t = this.Columns[this.CurrentCell.ColumnIndex].ValueType;
 
-                    e.Handled = MaskNumber(e.KeyChar, t, control.Text);
+                    var handled = MaskNumber(e.KeyChar, t, control.Text);
+
+                    if (!handled && this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle!=null && this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle.Tag != null)
+                    {
+                        if (t == typeof(decimal) || t == typeof(Single) || t == typeof(Double) || t == typeof(Int16) || t == typeof(Int32) || t == typeof(Int64) || t == typeof(UInt16) || t == typeof(UInt32) || t == typeof(UInt64) || t == typeof(Byte) || t == typeof(SByte))
+                        {
+                            //double dblRet = 0;
+                            //if (!double.TryParse(control.Text + e.KeyChar.ToString(), out dblRet))
+                            //{
+                            //    handled = true;
+                            //}
+                            //if (dblRet < 0 || dblRet > 100)
+                            //{
+                            //    handled = true;
+                            //}
+                        }
+                        else
+                        {
+                            handled = !Regex.IsMatch(e.KeyChar.ToString(), this.Columns[this.CurrentCell.ColumnIndex].DefaultCellStyle.Tag.ToString(), RegexOptions.ECMAScript);
+                        }
+                    }
+                    e.Handled = handled;
                 }
             }
             catch { }

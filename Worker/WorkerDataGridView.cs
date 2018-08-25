@@ -85,6 +85,12 @@ namespace Worker
             this.workerCodeColumn,
             this.workerNameColumn});
 
+
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Columns[this.workerCodeColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9;
+            this.Columns[this.workerNameColumn.Name].DefaultCellStyle.Tag = C_RegularExpressions_A_Za_z0_9Chinese;
+
+
             if (this.Tag != null && this.FindForm() != null && this.FindForm().Name == this.Tag.ToString())
             {
                 this.delColumn.Visible = false;
